@@ -1,0 +1,42 @@
+.navbar {
+    background-color: #724c4c;
+    color: #fff;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .navbar-title {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 0 0 300px;
+    
+  }
+  button {
+    cursor: pointer;
+  }
+  .navbar-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .navbar-menu.show {
+    max-height: 200px; /* Adjust the height as needed */
+  }
+  
+  .navbar-item {
+    padding: 10px;
+  }
+
+ 
