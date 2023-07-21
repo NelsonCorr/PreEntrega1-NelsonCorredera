@@ -1,0 +1,11 @@
+.Controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   align-items: baseline;
+}
+.Button {
+
+    max-height: 20px;
+    margin: 0 10px 0 10px;
+}

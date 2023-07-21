@@ -1,0 +1,38 @@
+.Card {
+    display: inline;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(110, 107, 107);
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    
+    margin: 0;
+   
+   
+    
+}
+.Header {
+
+    flex-direction: column;
+}
+.Img {
+    max-height: 200px;
+    width: 200px;
+}
+
+.nombreItem {
+    max-width: 200px;
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px 2px 2px 2px;
+}

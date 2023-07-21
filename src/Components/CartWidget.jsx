@@ -1,14 +1,14 @@
-
+import CarritoImage from '../assets/CarritoImage.svg'
 
 const CartWidget = () => {
     
     return (
-        <>
+       
             <div>
-                <img src="./src/assets/CarritoImage.svg" alt="" />
-                <h1 >20</h1>
+                <img src={CarritoImage} alt="imagen carrito" />
+                0
             </div>
-        </>);
+        )
 }
 
 export default CartWidget;

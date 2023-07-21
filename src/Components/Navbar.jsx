@@ -1,39 +1,24 @@
-
+import CartWidget from './CartWidget';
 import './Navbar.css';
+import { NavLink, Link } from 'react-router-dom';
+const Navbar = () => {
 
-const Navbar = ({menuItems}) => {
-    
     return (
-        <>
-            <nav>
-                <div className="navbar">
-                    <button className="navbar-title">
-                        AutomaticInc
-                    </button>
-                    <ul className={`navbar-menu `}>
-                        <li className={`navbar-item`}>
-                            <button >
-                            PRODUCTS
-                            </button>
-                            
-                        </li>
-                        <li className={`navbar-item`}>
-                        <button>
-                            ELEMENTS
-                            </button>
-                        </li>
-                        <li className={`navbar-item`}>
-                        <button>
-                            PURCHASE
-                        </button>
-                        </li>
-                       
-                    </ul>
-
+        
+            <nav class="navbar">
+                <Link to='/'>
+            <h3> AutomaticInc </h3>
+            </Link>
+                <div class="navbar-container">
+                    <NavLink to={`/categoria/brazo`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}> Brazo robotico </NavLink>
+                    <NavLink to={`/categoria/torno`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}> Torno </NavLink>
+                    <NavLink to={`/categoria/centro`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}> Centro de mecanizado </NavLink>
                 </div>
-                {menuItems}
-            </nav>
-        </>);
+            <CartWidget class="carrito"/>
+           
+          
+        </nav >
+        )
 }
 
-export default Navbar;
+export default Navbar
