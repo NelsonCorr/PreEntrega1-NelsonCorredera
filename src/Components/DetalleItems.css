@@ -4,31 +4,48 @@
     padding: 10px 10px 10px 10px;
     background-color: rgb(110, 107, 107);
     flex-direction: column;
-    justify-items: center;
+    justify-content:center;
     border-radius: 10px;
     position: absolute;
     left:500px;
-  
+    margin-top: 50px;
     width: 300px;
    
     
 }
 .Header {
-
+    display: flex;
     flex-direction: column;
+    justify-items: center;
 }
 .Img {
     max-height: 200px;
     width: 200px;
+    justify-items: center;
+    margin-left: 5px;
 }
 
 .nombreItem {
     max-width: 200px;
     text-align: center;
+    justify-items: center;
 }
 .info {
     text-align: center;
 }
+.Controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   align-items: baseline;
+}
+.Button {
+
+    max-height: 20px;
+    margin: 0 10px 0 10px;
+    border-radius: 5px;
+}
+
 
 footer{
     text-align: center;

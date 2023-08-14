@@ -1,49 +1,40 @@
 .navbar {
-    background-color: #724c4c;
+    background-color: #5a8896;
     color: #fff;
   }
-  
+  .Title{
+    font-size: xx-large;
+    text-decoration-line: none;
+  }
   .navbar-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 10px; 
-    list-style-type: none;
+    font-size: x-large;
+    font-style:oblique;
+    text-decoration-color: black;
     display: flex;
     justify-content: space-around;
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
-  
-  .navbar-title {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-    margin: 0 0 0 300px;
     
   }
+
+ 
   button {
     cursor: pointer;
   }
-  .navbar-menu {
-   
-  }
 
-  .navbar-menu.show {
-    max-height: 200px; /* Adjust the height as needed */
-  }
-  
-  .navbar-item {
-    padding: 10px;
-    background-color: grey;
-  }
 
- .carrito {
-  
-  position: absolute;
-  
-
- }
+.Option {
+    text-decoration-line: none;
+}
+.ActiveOption{
+  background-color: #4fa6c0;
+  text-decoration-line: none;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  width: auto;
+  text-align: center;
+}

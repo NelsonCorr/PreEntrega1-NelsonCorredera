@@ -1,29 +1,33 @@
 import './ContenedorDetalleItems.css'
 import { useState, useEffect } from 'react'
-import {getProductById} from '../asyncMock'
 import DetalleItems from './DetalleItems'
 import { useParams } from 'react-router-dom'
+import { doc, getDoc } from "firebase/firestore"
+import { dataBase } from '../Firebase/config'
 
 
+const ContenedorDetalleItems = () => {
+    const [product, setProduct] = useState(null)
 
-const ContenedorDetalleItems =() => {
-    const[product, setProduct] = useState(null)
+    const  id  = useParams().id;
+    
+    useEffect(() => {
 
-    const {itemId} = useParams() 
-
-    useEffect (() => {
-        getProductById(itemId)
-            .then(response => {
-                setProduct(response)
+        const docRef = doc(dataBase, "Maquinas", id) ;
+       
+        getDoc(docRef)
+            .then((resp) => {
+                setProduct(
+                    { ...resp.data(), id: resp.id }
+                  
+                )
             })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [itemId])
-
+    }, [id])
+ 
     return (
         <div className='ContenedorDetalleItems'>
-            <DetalleItems {...product} />
+            {product && <DetalleItems item={product} />}
+            
         </div>
     )
 }
